@@ -6,29 +6,151 @@
     <title>Projeto Biblioteca</title>
     <link rel="stylesheet" href="style.css">
 </head>
+    <title>Alunos</title>
 <body>
-    <div class="corpo"></div>
-    <nav>
-        <div class="menu-sid">
-            <i class="bi bi-list sidebar-toggle"></i>
-        </div>
-        <div class="div-logo-name">
-            <span class="logo-name">Biblioteca</span>
-        </div>
-        <div class="menu-itens">
-            <ul class="nav-links">
-                <li><a href="dashboard.html">
-                    <i class="bi bi-house"></i>
-                    <span class="link-name">dashboard</span>
-                </a></li>
-                <li><a href="Alunos.html">
-                    <i class="bi bi-person-vcard"></i>
-                    <span class="link-name">Alunos</span>
-                </a></li>
-                <li><a href="Funcionarios.html"></a></li>
-            </ul>
-        </div>
-    </nav>
+    <div class="corpo">
+        <nav>
+            <div class="menu-sid">
+                <i class="bi bi-list sidebar-toggle"></i>
+            </div>
+            <div class="div-logo-name">
+                <span class="logo-name">Biblioteca</span>
+            </div>
+            <div class="menu-items">
+                <ul class="nav-links">
+                    <li><a href="dahsboard.html">
+                        <i class="bi bi-house"></i>
+                        <samp class="link-name">Dahsboard</samp>
+                    </a></li>
+                    <li><a href="Alunos.html">
+                        <i class="bi bi-person-vcard"></i>
+                        <span class="link-name">Alunos</span>
+                    </a></li>
+                    <li><a href="Funcionarios.html">
+                        <i class="bi bi-person-vcard"></i>
+                        <span class="link-name">Funcionarios</span>
+                    </a></li>
+                    <li><a href="Editoras.html">
+                        <i class="bi bi-clipboard-data"></i>
+                        <span class="link-name">Editoras</span>
+                    </a></li>
+                    <li><a href="Livros.html">
+                        <i class="bi bi-clipboard-data"></i>
+                        <span class="link-name">Livros</span>
+                    </a></li>
+                    <li><a href="Emprestimos.html">
+                        <i class="bi bi-person-workspace"></i>
+                        <span class="link-name">Emprestimos</span>
+                    </a></li>
 
-</body>
-</html>
+            </div>
+        </nav>
+        <section class="dahsboard">
+            <div class="top">
+            <i class="bi bi-list sidebar-toggle2"></i>
+            <div class="logo-name">
+                <h1 class="seduc-logo">Biblioteca Escolar</h1>
+            </div>
+            </div>
+            <div class="actionimg">
+                <div class="profile"onclick="menuToggle();">
+                    <img src="img/avatar3.png">
+                </div>
+                <div class="menu">
+                    <h3>
+                        Rivelino
+                    </h3>
+                    <ul>
+                        <li>
+                            <span class="material-icons icons-size"><i class="bi bi-person"></i></span>
+                            <a href="#">Perfil</a>
+                        </li>
+                        <li>
+                            <span class="material-icons icons-size"><i class="bi bi-question-circle"></i></span>
+                            <a href="#">Ajuda</a>
+                        </li>
+                        <li>
+                            <span class="material-icons icons-size"><i class="bi bi-gear"></i></span>
+                            <a href="#">configurações</a>
+                        </li>
+                        <li>
+                            <span class="material-icons icons-size"><i class="bi bi-box-arrow-right"></i></span>
+                            <a href="index.html">Saida</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="corpo-da-pag">
+                <div class="scroll">
+                    <div class="activity">
+                        <div class="overview">
+                            <div class="title">
+                                <i class="bi bi-person-rolodex"></i>
+                                   <span class="text">Alunos</span>
+                            </div>
+                            <div class="seducsever" style=" white-space: nowrap;">
+                               <li class="breadcrumb-item"><a
+                                   style="text-decoration: none !important; color: black; font-size: 12px; margin-left: 2%;"
+                                   href="dashboard.html">Biblioteca Escolar</a></li>
+                                  <li class="breadcrumb-item"><a
+                                style="text-decoration: none !important; color: rgb(99, 99, 99); font-size: 12px; margin-left: 2%;"
+                                href="Alunos.html">&nbsp> Alunos</a></li>
+                        </div>
+                    </div>
+                    <div id="lupa-grid">
+                        <button type="button" class="button blue mobile" id="cardastraAlunos">cardastraAlunos</button>
+                    </div>
+                    <br>
+                    <table id="tableAluno" class="records">
+                        <thead>
+                            <tr>
+                                <th>Home</th>
+                                <th>Matricula</th>
+                                <th>Curso</th>
+                                <th>Serie</th>
+                                <th>Celular</th>
+                                <th>E-mail</th>
+                                <th>Açao</th>
+                            </tr>
+                        </thead>
+                    </table>
+                    <div class="modal" id="modal2">
+                        <div class="modal-content">
+                            <header class="modal-header">
+                                <h2>Excluir Aluno</h2>
+                                <span class="modal-close" id="modalClose2"></span>
+                            </header>
+                            <div id="avisoDelete"></div>
+                        </div>
+                        <footer class="modal-foorter">
+                            <button id="apagar" class="button red">Apagar</button>
+                            <button id="cancelar2" class="button blue"> cancelar</button>
+                        </footer>
+                    </div>
+                </div>
+                <div class="modal" id="modal">
+                    <div class="modal-content">
+                        <header class="modal-header">
+                            <h2>Novo Aluno</h2>
+                            <samp class="modal-close" id="modalClose">&#10006</samp>
+                        </header>
+                        <form id="form" class="modal-form">
+                            <input type="text" id="nome" data-index="new" class="modal-field" placeholder="Nome do Aluno" required>
+                            <input type="number" id="matricula" class="modal-field" placeholder="Mtricula do Aluno" required>
+                            <input type="text" id="telefone" class="modal-field" placeholder="Telefone do Aluno" required>
+                            <input type="text" id="celular"  class="modal-field" placeholder="Celular do aluno" required>
+                            <input type="email" id="email"  class="modal-field" placeholder="E-mail do Alino" required>
+                            <input type="text" id="endereço"  class="modal-field" placeholder="Endereço do Aluno" required>
+                            <input type="number" id=" data-index="new" class="modal-field" placeholder="Numero da residencia" required>
+                            <input type="text" id="nome" class="modal-field" placeholder="Complemento Endereço" required>
+                            <input type="text" id="nome" class="modal-field" placeholder="Cidade do Aluno" required>
+                            <input type="text" id="nome" class="modal-field" placeholder="Estado do Aluno" required>
+                            <input type="text" id="nome" data-index="new" class="modal-field" placeholder="Curso do Aluno" required>
+                            <input type="number" id="nome" class="modal-field" placeholder="Serie do Aluno" required>
+                            
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
