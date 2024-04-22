@@ -1,0 +1,10 @@
+/* A regra afetara todos os elemestos html da pagina */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}@font-face { 
+        font-family: 'montebello';
+        src: url(montebello-regular.ttf)format("truetype"), url(montebello-light.otf)
+
+}
