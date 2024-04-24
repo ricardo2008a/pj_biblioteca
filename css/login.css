@@ -5,6 +5,36 @@
     box-sizing: border-box;
 }@font-face { 
         font-family: 'montebello';
-        src: url(montebello-regular.ttf)format("truetype"), url(montebello-light.otf)
+        src: url(montebello-regular.ttf)format("truetype"), url(montebello-light.otf)format(opentype);
+        font-weight: normal;
+        font-size: normal;
+}
+body{ 
+    width: 100%;
+    height: 100%;
+    background: #066b7c;
+    overflow: hidden;
+}
+.container{
+    max-width: 440px;
+    padding: 0 20px;
+    margin: 170px auto;
+}
+.wrapper{
+    width: 400px;
+    height: 340px;
+    background: whitesmoke;
+    border-radius: 7px;
+    box-shadow: 0 6px -4px rgb(0, 0, 0, 25);
+}
+.wrapper .title{
+    line-height: 80px;
+    background: gray;
+    padding-left: 20px;
+    border-radius: 7px 7px 0 0;
+    font-size: 25px;
+    color: rgb(243, 241, 241);
+    font-weight: 600;
+    font-family: 'montebello', times, serif;
 
 }
